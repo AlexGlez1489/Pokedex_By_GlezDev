@@ -1,0 +1,448 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --txt-color:#fff;
+    --color-principal:rgb(255, 255, 255);
+}
+/* Configuración global de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración para el html y el body */
+html {
+    font-size: 16px; 
+    scroll-behavior: smooth; 
+}
+span {
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Imágenes y contenido multimedia */
+img, video {
+    max-width: 100%;
+    height: auto;
+    margin:1.2rem;
+}
+
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Botones */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Pantalla de carga */
+
+/* From Uiverse.io by SchawnnahJ */ 
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+   }
+   
+   .loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+   }
+   
+   .loader:before {
+    animation: before8 2s infinite;
+   }
+   
+   .loader:after {
+    animation: after6 2s infinite;
+   }
+   
+   @keyframes before8 {
+    0% {
+     width: 0.5em;
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    35% {
+     width: 2.5em;
+     box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    70% {
+     width: 0.5em;
+     box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    100% {
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   }
+   
+   @keyframes after6 {
+    0% {
+     height: 0.5em;
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   
+    35% {
+     height: 2.5em;
+     box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+   
+    70% {
+     height: 0.5em;
+     box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+   
+    100% {
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   }
+   
+   .loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+   }
+   
+.contenedor-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+/* Configuración de cajas flexibles y de cuadrícula */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.button-container {
+    display: flex;
+    background-color: black;
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+  }
+  
+  .button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  
+ 
+
+  /* Estilo del contenedor de la Pokédex */
+.pokedex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    max-width: 90rem; /* Ancho máximo */
+    margin: 2rem auto; /* Centrado vertical y horizontal */
+    text-align: center; /* Alinear texto al centro */
+    transition: transform 0.3s; /* Transición al hacer hover */
+}
+
+/* Efecto al pasar el ratón sobre el contenedor */
+.pokedex-container:hover {
+    transform: translateY(-5px); /* Levantar ligeramente el contenedor */
+}
+
+/* Título de la Pokédex */
+.pokedex-title {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    color: #333333; /* Color oscuro */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    
+}
+
+/* Pantalla de la Pokédex */
+.pokedex-screen {
+    background-color: #f7f7f7; /* Fondo gris claro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Nombre del Pokémon */
+.pokemon-name {
+    font-size: 1.5rem; /* Tamaño de fuente medio */
+    color: #555555; /* Color gris */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Imagen del Pokémon */
+.pokemon-image {
+    width: 100%; /* Ancho completo */
+    max-width: 220px; /* Ancho máximo */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Botón de mostrar Pokémon */
+.pokedex-button {
+    background-color: #ff5733; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 4rem; /* Bordes redondeados */
+    padding: 1rem 2.8rem;
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    letter-spacing: .1rem;
+    overflow: hidden;
+}
+
+/* Efecto hover en el botón */
+.pokedex-button:hover {
+    color: #000;
+  
+}
+.pokedex-button::after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.pokedex-button:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.pokemon-type,
+.pokemon-description {
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #555555; /* Color gris */
+    margin-top: 0.5rem; /* Espaciado superior */
+}
+
+.pokemon-type-container {
+    background-color: green; /* Color de fondo predeterminado */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    margin-top: 0.5rem; /* Espaciado superior */
+}
+
+.pokemon-image[src=""] {
+    display: none; /* Ocultar la imagen si no tiene un src */
+}
+
+.pokedex-container {
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+.pokedex-description {
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    line-height: 1.6; /* Mayor espacio entre líneas */
+    text-wrap: wrap;
+}
+
+
+.pokedex-container-a {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    max-width: 70rem; /* Ancho máximo */
+    margin: 2rem auto; /* Centrado vertical y horizontal */
+    text-align: center; /* Alinear texto al centro */
+    transition: transform 0.3s; /* Transición al hacer hover */
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .1rem solid #FFCC00;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--bg-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease-out;
+    
+}
+
+.social-media a:hover {
+    background: var(--color-principal);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem #FFCC00;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--bg-color);
+}
+
+/* Animacion de pokemon */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pokemon-info {
+    opacity: 0; /* Oculta inicialmente el contenedor */
+    transform: scale(0.5); /* Escala hacia abajo inicialmente */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.pokemon-info.animate {
+    opacity: 1; /* Muestra el contenedor */
+    transform: scale(1); /* Escala al tamaño normal */
+}
+
+.pokemon-description {
+    color: #000; /* Negro */
+}
+.pokemon-height {
+    color: #f00; /* Rojo */
+}
+.pokemon-info {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco para el contenedor */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-type {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #E74C3C; /* Rojo coral para el tipo */
+    border: 1px solid #BDC3C7; /* Borde gris medio */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.pokemon-description,
+.pokemon-height,
+.pokemon-weight,
+.pokemon-abilities {
+    font-size: 16px;
+    color: #2C3E50; /* Azul oscuro para el texto */
+
+    border: 1px solid #BDC3C7; /* Borde gris medio */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Efecto hover */
+.pokemon-type:hover,
+.pokemon-description:hover,
+.pokemon-height:hover,
+.pokemon-weight:hover,
+.pokemon-abilities:hover {
+    opacity: 0.9; /* Ligera reducción de opacidad al pasar el mouse */
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 70%;
+    }
+    html {
+        font-size: 80%;
+    }
+    
+        footer {
+        font-size: 90%;
+     }
+
+}
