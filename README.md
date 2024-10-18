@@ -27,6 +27,11 @@ Para ejecutar el proyecto en tu entorno local, sigue estos pasos:
    ```bash
    git clone https://github.com/AlexGlez1489/Pokedex_By_GlezDev.git
 ## 💻 Vista Previa
-![iPhone-13-PRO-pokedex-moderno netlify app](https://github.com/user-attachments/assets/d5ccba2f-7bfb-48e3-aa32-ae252a739717)
-![Macbook-Air-pokedex-moderno netlify app](https://github.com/user-attachments/assets/369330b2-300a-456e-9c15-d9211eb6d7f7)
+<p align="center">
+
+  <img src="https://github.com/user-attachments/assets/369330b2-300a-456e-9c15-d9211eb6d7f7" alt="Macbook Air Pokedex Moderno" width="800"/>
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d5ccba2f-7bfb-48e3-aa32-ae252a739717" alt="iPhone-13 PRO Pokedex Moderno" width="300"/>
+</p>
 
